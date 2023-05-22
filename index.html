@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <!-- display section -->
+        <section class="section">
+            <div class="section-header">
+                <h3 class="section-title">Display Color</h3>
+                <button class="section-header-action"> Random color</button>
+            </div>
+                <div class="divider"></div>
+                <div class="colorDisplay"></div>
+         
+
+        </section>
+
+
+
+
+        <!-- change and copy color -->
+         <section class="section">
+            <div class="section-header">
+                <h3 class="section-title">Change & Copy Color</h3>
+                <button class="section-header-action">Copy to Clipboard</button>
+            </div>
+                <div class="divider"></div>
+                <div class="select-copy-mode">
+                    <p class="lead">Select Copy mode</p>
+                    <div class="mode-radio-grp">
+
+                        <div class="mode-input-grp">
+                            <input type="radio" name="color-mode" id="color-mode-hex" checked>
+                            <label for="color-mode-hex">Hex</label>
+                        </div>
+
+                        <div class="mode-input-grp">
+                            <input type="radio" name="color-mode" id="color-mode-rgb" checked>
+                            <label for="color-mode-rgb">RGB</label>
+                        </div>    
+                    </div>
+                </div>
+
+                <div class="selected-color-code">
+                    <div class="hex-input-grp">
+                        <label for="input-hex" class="lead"> Hex</label>
+                        <input type="text" value="#dddeee" placeholder="#dddeee" id="input-hex" class="text-input hex-input">
+                        <div class="hex-icon"></div>
+                        </div>
+                        
+                    <div class="rgb-input-grp">
+                        <label for="input-rgb" class="lead"> Rgb</label>
+                        <input type="text" value="rgb(221, 222, 238)" placeholder="rgb(221, 222, 238)" id="input-rgb" class="text-input" disabled>
+                    </div>
+
+                </div>
+
+              <div class="color-sliders">
+                <p class="lead">Adjust RGB Color</p>
+                    <div class="color-sliders-grp">
+                        
+                        <div>
+                            <div class="slider-label-grp">
+                                <p>Red</p>
+                                <p>221</p>
+                               </div>
+                               <input type="range" oninput="generateRgbColor()" min="0" max="255" class="color-slider color-slider-red" value="221" id="color-slider-red">
+                        </div>
+                        <div>
+                            <div class="slider-label-grp">
+                                <p>Green</p>
+                                <p>222</p>
+                               </div>
+                               <input type="range" oninput="generateRgbColor()" min="0" max="255" class="color-slider color-slider-green" value="222" id="color-slider-green">
+                        </div>
+                        <div>
+                            <div class="slider-label-grp">
+                                <p>Blue</p>
+                                <p>238</p>
+                               </div>
+                               <input type="range" oninput="generateRgbColor()" min="0" max="255" class="color-slider color-slider-blue" value="238" id="color-slider-blue">
+                        </div>
+
+
+                    </div>
+                </div> 
+                    
+            </div>
+
+        </section>
+
+    <!-- <script src="app.js"></script> -->
+    <script src="rgb.js"></script>
+</body>
+</html>
